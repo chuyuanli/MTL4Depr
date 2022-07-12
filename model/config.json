@@ -1,0 +1,76 @@
+{
+    "dataset_reader": {
+        "type": "dialog_reader",
+        "params": {
+            "daic_resize": false,
+            "encode_turns": false,
+            "has_act": true,
+            "has_emo": true,
+            "has_phq": true,
+            "has_phqbi": true,
+            "has_topic": true,
+            "orig_separation": true
+        },
+        "token_indexers": {
+            "tokens": {
+                "type": "single_id"
+            }
+        },
+        "tokenizer": {
+            "type": "spacy",
+            "language": "en_core_web_sm"
+        }
+    },
+    "model": {
+        "type": "hierarchical_classifier",
+        "block_encoder": {
+            "type": "gru",
+            "bidirectional": false,
+            "dropout": 0.1,
+            "hidden_size": 512,
+            "input_size": 256,
+            "num_layers": 1
+        },
+        "embedder": {
+            "token_embedders": {
+                "tokens": {
+                    "type": "embedding",
+                    "embedding_dim": 128
+                }
+            }
+        },
+        "params": {
+            "cuda": 2,
+            "has_act": true,
+            "has_emo": true,
+            "has_phq": true,
+            "has_phqbi": true,
+            "has_topic": true,
+            "l1_coef": 1.0,
+            "use_bert": false
+        },
+        "turn_encoder": {
+            "type": "lstm",
+            "bidirectional": true,
+            "dropout": 0.1,
+            "hidden_size": 128,
+            "input_size": 128,
+            "num_layers": 1
+        }
+    },
+    "train_data_path": "train",
+    "validation_data_path": "dev",
+    "trainer": {
+        "cuda_device": 2,
+        "num_epochs": 100,
+        "optimizer": {
+            "type": "Adam",
+            "lr": 0.001
+        },
+        "patience": 5
+    },
+    "data_loader": {
+        "batch_size": 4,
+        "shuffle": true
+    }
+}

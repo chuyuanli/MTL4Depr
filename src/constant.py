@@ -4,9 +4,9 @@ dialogues_act = {1: "inform", 2: "question", 3: "directive", 4: "commissive"}
 dialogues_emotion = {0: "no emotion", 1: "anger", 2: "disgust", 3: "fear", 4: "happiness", 5: "sadness", 6: "surprise"}
 
 # data repo
-DAILY_DIR = 'dailydialog/'
-DUAL_DIR = 'daic-daily/'
-DAIC_DIR = 'daic/'
+DAILY_DIR = 'data/dailydialog/'
+DAIC_DIR = 'data/daic/'
+DUAL_DIR = '.'
 
 # dailydialog files
 F_EMO = DAILY_DIR+'dialogues_emotion.txt'
