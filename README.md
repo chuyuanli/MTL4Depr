@@ -32,3 +32,11 @@ We show a few examples in `data/dailydialog/`. We use the original separation of
 We provide annotation of dialog act for Ellie's utterances in DAIC (repo `analysis/`). Note that it's a corase-grained annotation with 5 classes: *question*, *opening*, *comment*, *backchannel*, *other*. 
 
 ## Citation
+```
+@inproceedings{li2022multi,
+  title={Multi-Task Learning for Depression Detection in Dialogs},
+  author={Li, Chuyuan and Braud, Chlo{\'e} and Amblard, Maxime},
+  booktitle={SIGDIAL 2022-The 23rd Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+  year={2022}
+}
+```
