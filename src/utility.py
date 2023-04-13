@@ -4,6 +4,7 @@ import ast
 import numpy as np
 import random
 import pandas as pd
+import disarray
 
 from constant import F_TOPIC, T_TRAIN, T_DEV, T_TEST, F_TEXT
 

@@ -8,7 +8,7 @@ This is the source code repository for the paper Multi-Task Learning for Depress
 - allennlp >= 2.0
 - pytorch
 - numpy
-
+- disarray: used in `utility.py`, calculates metrics derived from a confusion matrix, info [here](https://pypi.org/project/disarray/)
 
 ## Datasets
 ### DAIC-WOZ
