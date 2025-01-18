@@ -328,8 +328,6 @@ def write_args2config(params):
     has_phq = str(params['has_phq'])[0].lower() + str(params['has_phq'])[1:]
     has_phqbi = str(params['has_phqbi'])[0].lower() + str(params['has_phqbi'])[1:]
     orig_separation = str(params['orig_separation'])[0].lower() + str(params['orig_separation'])[1:]
-    daic_resize = str(params['daic_resize'])[0].lower() + str(params['daic_resize'])[1:]
-    del_ellie = str(params['del_ellie'])[0].lower() + str(params['del_ellie'])[1:]
 
     if params['use_bert']:
         turn_h = 768
@@ -394,8 +392,6 @@ def write_args2config(params):
                 "has_topic": {has_topic},
                 "has_phq": {has_phq},
                 "has_phqbi": {has_phqbi},
-                "daic_resize": {daic_resize},
-                "del_ellie": {del_ellie},
                 "orig_separation": {orig_separation}
             }}
         }},  
